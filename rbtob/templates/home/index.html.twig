@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+ {% block body %}
+ 
+   {% include "home/navbar.html.twig" %}
+
+<main>
+  <div class="main-container">
+    <div class="why-rbtob">
+      <div class="welcome-rbtob-app">
+        <h1>Pourquoi utiliser Rbtob ?</h1>
+      </div>
+      <div class="text-why-rbtob">
+        <p>Cupidatat commodo quis quis nulla eu aliquip aliqua ullamco nulla reprehenderit. Do magna est dolor voluptate dolore ipsum do exercitation enim irure eu nostrud sit. Fugiat duis deserunt eiusmod occaecat cupidatat consequat et et commodo veniam incididunt est. Deserunt quis minim tempor Lorem qui esse amet deserunt sunt amet. Sint eu quis proident consectetur duis aliqua aliquip.
+
+Aliqua aute commodo officia labore mollit fugiat velit. Incididunt in proident consequat irure sint culpa anim irure esse et fugiat. Qui officia fugiat non proident est nostrud ad ad dolore non ex.
+
+Laboris qui exercitation est nisi et elit quis aute laboris labore ex et enim. Eu laboris nisi veniam ipsum sit fugiat exercitation id ullamco consequat amet. Exercitation cillum officia adipisicing culpa id ea irure eu nostrud. Velit ut sit fugiat do cillum nisi cupidatat nostrud cillum. Ut Lorem nulla ullamco nostrud est ut ex adipisicing fugiat eiusmod labore cillum adipisicing.
+
+Amet excepteur non sint sit sunt labore exercitation nostrud veniam eiusmod nisi adipisicing exercitation. Proident esse do duis laborum. Qui duis mollit duis velit mollit. Cillum incididunt id sint do. Dolor anim sunt laboris eu Lorem ea.
+
+Do nostrud irure ut sit consequat velit ea ex laboris sint nostrud eiusmod. Est ad culpa amet ullamco proident id occaecat velit reprehenderit ex. Cillum id non cillum in duis tempor sunt. Labore ad magna occaecat occaecat. Quis consectetur aliqua aliqua deserunt quis deserunt eiusmod.
+
+Magna do adipisicing tempor sit cillum aute ex sint. Est anim consequat velit ad ut voluptate enim sit sint est nisi commodo. Duis nulla ullamco deserunt velit labore aliquip qui quis. Incididunt aliquip anim elit est exercitation anim. Non ut pariatur exercitation esse velit ut ut excepteur in minim aute exercitation ipsum dolore. Nisi nisi qui id mollit non qui elit Lorem sit reprehenderit sunt cillum.
+
+Enim proident irure ex ex enim esse sit ipsum. Id ad mollit in adipisicing voluptate ullamco. Ad labore sunt qui sint nisi consectetur quis.
+
+Mollit aliquip voluptate velit nulla ex incididunt sunt eu. Nulla cupidatat amet dolor veniam eiusmod et dolor adipisicing eu. Aliquip cupidatat in incididunt tempor duis cillum in id qui tempor aliqua. Et consequat amet sit ad.
+
+Et officia esse occaecat anim nisi do laboris reprehenderit consectetur deserunt non. Reprehenderit irure magna Lorem aliquip fugiat excepteur cupidatat non eiusmod ipsum ullamco incididunt anim laborum. Consectetur voluptate pariatur ea irure reprehenderit ad sit aliqua voluptate dolor. Mollit exercitation dolore deserunt anim sint officia est labore. Aliquip consequat ea ex cillum voluptate pariatur esse consectetur laboris occaecat. Nisi voluptate tempor incididunt elit incididunt voluptate aliquip. Minim labore sit magna fugiat culpa dolor quis nulla aliquip dolor quis nulla nostrud pariatur.
+
+Esse est adipisicing deserunt mollit veniam excepteur elit proident culpa ullamco ea deserunt nisi id. Reprehenderit incididunt veniam labore sunt. Deserunt nulla dolor tempor tempor Lorem ex qui tempor irure.</p>
+      </div>
+    </div>
+      <div class="user-conexion">
+      <style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Créer votre compte utilisateur</h1>
+    {% if is_granted('ROLE_USER') %}
+        <a href=" {{ path('app_logout') }} ">Se déconnecter</a>
+    {% else %}
+        <a href=" {{ path('app_register') }} ">S'inscrire</a>
+        <a href=" {{ path('app_login') }} ">Se connecter</a>
+    {% endif %}
+</div>
+      </div> 
+  </div>
+</main>
+
+
+
+ {% endblock %} 

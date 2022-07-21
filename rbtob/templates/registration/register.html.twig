@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+
+{% block body %}
+
+{% include "home/navbar.html.twig" %}
+    
+    <h1>S'enregister</h1>
+    
+
+    {{ form_start(registrationForm) }}
+    
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        
+
+        <button type="submit" class="btn">Register</button>
+    {{ form_end(registrationForm) }}
+{% endblock %}
