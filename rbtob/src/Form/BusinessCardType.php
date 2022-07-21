@@ -22,12 +22,36 @@ class BusinessCardType extends AbstractType
                 'attr' => [
                     'class' => 'form-control'],
                 ])
-            ->add('firstname', TextType::class)
-            ->add('lastname', TextType::class)
-            ->add('position', TextType::class)
-            ->add('phoneNumber', TelType::class)
-            ->add('email', EmailType::class)
-            ->add('website', UrlType::class)
+            ->add('firstname', TextType::class, [
+                'label' => 'Prénom',
+                'attr' => [
+                    'class' => 'form-control'],
+                ])
+            ->add('lastname', TextType::class, [
+                'label' => 'Nom',
+                'attr' => [
+                    'class' => 'form-control'],
+                ])
+            ->add('position', TextType::class, [
+                'label' => 'Fonction',
+                'attr' => [
+                    'class' => 'form-control'],
+                ])
+            ->add('phoneNumber', TelType::class, [
+                'label' => 'Téléphone',
+                'attr' => [
+                    'class' => 'form-control'],
+                ])
+            ->add('email', EmailType::class, [
+                'label' => 'Email',
+                'attr' => [
+                    'class' => 'form-control'],
+                ]) 
+            ->add('website', UrlType::class, [
+                'label' => 'Site internet',
+                'attr' => [
+                    'class' => 'form-control'],
+                ])
         ;
         
     }
