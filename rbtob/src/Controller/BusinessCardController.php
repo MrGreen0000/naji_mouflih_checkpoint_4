@@ -37,10 +37,16 @@ class BusinessCardController extends AbstractController
     }
 
     #[Route('/businessCard/', name: 'app_businessCard')]
-    public function index(): Response
+    public function show(BusinessCardRepository $businessCardRepository): Response
     {
-        return $this->render('businessCard/index.html.twig');
+        $businessCards = $businessCardRepository->findAll();
+
+        return $this->render('businessCard/index.html.twig', [
+            'businessCards' => $businessCards,
+        ]);
+
     }
+
 
    
 }
